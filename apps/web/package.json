@@ -7,22 +7,25 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "format": "prettier --check . --ignore-path ../../.gitignore"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
     "next": "15.0.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106"
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^20",
-    "@types/react": "18.3.1",
-    "@types/react-dom": "18.3.0",
-    "eslint": "^8",
+    "@types/react": "catalog:react19",
+    "@types/react-dom": "catalog:react19",
+    "eslint": "catalog:",
     "eslint-config-next": "15.0.3",
-    "typescript": "5.5.4"
-  }
+    "typescript": "catalog:"
+  },
+  "prettier": "@repo/prettier-config"
 }
