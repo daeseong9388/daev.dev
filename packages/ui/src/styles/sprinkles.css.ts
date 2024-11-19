@@ -43,6 +43,7 @@ const responsiveProperties = defineProperties({
     paddingBottom: space,
     paddingLeft: space,
     paddingRight: space,
+    gap: space,
     marginTop: margins,
     marginBottom: margins,
     marginLeft: margins,

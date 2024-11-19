@@ -3,65 +3,10 @@ import { AllHTMLAttributes, createElement, ElementType } from "react";
 import cn from "classnames";
 import { sprinkles } from "@/styles/sprinkles.css.js";
 
-export type SpaceProps = {
-  padding?: Sprinkles["padding"];
-  paddingX?: Sprinkles["paddingX"];
-  paddingY?: Sprinkles["paddingY"];
-  paddingTop?: Sprinkles["paddingTop"];
-  paddingBottom?: Sprinkles["paddingBottom"];
-  paddingLeft?: Sprinkles["paddingLeft"];
-  paddingRight?: Sprinkles["paddingRight"];
-  margin?: Sprinkles["margin"];
-  marginX?: Sprinkles["marginX"];
-  marginY?: Sprinkles["marginY"];
-  marginTop?: Sprinkles["marginTop"];
-  marginBottom?: Sprinkles["marginBottom"];
-  marginLeft?: Sprinkles["marginLeft"];
-  marginRight?: Sprinkles["marginRight"];
-};
-
-export type FlexProps = {
-  display?: Sprinkles["display"];
-  alignItems?: Sprinkles["alignItems"];
-  justifyContent?: Sprinkles["justifyContent"];
-  flexDirection?: Sprinkles["flexDirection"];
-  flexWrap?: Sprinkles["flexWrap"];
-  flexGrow?: Sprinkles["flexGrow"];
-  flexShrink?: Sprinkles["flexShrink"];
-};
-
-export type LayoutProps = {
-  position?: Sprinkles["position"];
-  top?: Sprinkles["top"];
-  bottom?: Sprinkles["bottom"];
-  left?: Sprinkles["left"];
-  right?: Sprinkles["right"];
-  inset?: Sprinkles["inset"];
-  width?: Sprinkles["width"];
-  maxWidth?: Sprinkles["maxWidth"];
-  minWidth?: Sprinkles["minWidth"];
-  zIndex?: Sprinkles["zIndex"];
-};
-
-export type StyleProps = {
-  background?: Sprinkles["background"];
-  color?: Sprinkles["color"];
-  borderRadius?: Sprinkles["borderRadius"];
-  opacity?: Sprinkles["opacity"];
-  pointerEvents?: Sprinkles["pointerEvents"];
-  cursor?: Sprinkles["cursor"];
-  textAlign?: Sprinkles["textAlign"];
-  transition?: Sprinkles["transition"];
-  overflow?: Sprinkles["overflow"];
-};
-
-export type BoxProps = SpaceProps &
-  FlexProps &
-  LayoutProps &
-  StyleProps & {
-    component?: ElementType;
-    className?: string;
-  } & Omit<
+export type BoxProps = Sprinkles & {
+  component?: ElementType;
+  className?: string;
+} & Omit<
     AllHTMLAttributes<HTMLElement>,
     | "className"
     | "content"
@@ -70,10 +15,7 @@ export type BoxProps = SpaceProps &
     | "color"
     | "width"
     | "cursor"
-    | keyof SpaceProps
-    | keyof FlexProps
-    | keyof LayoutProps
-    | keyof StyleProps
+    | keyof Sprinkles
   >;
 
 export const getProps = (props: BoxProps) => {
@@ -93,6 +35,7 @@ export const getProps = (props: BoxProps) => {
     marginLeft,
     marginRight,
     display,
+    gap,
     alignItems,
     justifyContent,
     flexDirection,
@@ -139,6 +82,7 @@ export const getProps = (props: BoxProps) => {
       marginLeft,
       marginRight,
       display,
+      gap,
       alignItems,
       justifyContent,
       flexDirection,
