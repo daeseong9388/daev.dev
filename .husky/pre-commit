@@ -1,1 +1,3 @@
-turbo run check-types
+pnpm run format:fix
+pnpm run lint:fix
+pnpm run typecheck
