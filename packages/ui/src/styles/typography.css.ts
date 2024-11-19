@@ -1,8 +1,8 @@
 import { createTextStyle } from "@capsizecss/vanilla-extract";
 import { style, styleVariants } from "@vanilla-extract/css";
 
-import { vars } from "./themes.css";
-import { mapToProperty, queries, responsiveStyle } from "./utils";
+import { vars } from "./themes.css.js";
+import { mapToProperty, queries, responsiveStyle } from "./utils.js";
 
 const makeTypographyRules = (textDefinition: typeof vars.text.standard) => {
   const { fontSize: mobileFontSize, lineHeight: mobileLineHeight } =

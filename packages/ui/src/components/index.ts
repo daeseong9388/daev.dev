@@ -1,3 +1,3 @@
-export * from "./layout/box";
-export * from "./typography/heading";
-export * from "./typography/text";
+export * from "./layout/box.js";
+export * from "./typography/heading.js";
+export * from "./typography/text.js";

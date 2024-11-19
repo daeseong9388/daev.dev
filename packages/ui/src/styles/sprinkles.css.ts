@@ -8,8 +8,8 @@ import {
 } from "@vanilla-extract/sprinkles";
 import { mapValues } from "es-toolkit/compat";
 
-import { vars } from "./themes.css";
-import { breakpoints } from "./utils";
+import { vars } from "./themes.css.js";
+import { breakpoints } from "./utils.js";
 
 const space = vars.spacing;
 export type Space = keyof typeof space;

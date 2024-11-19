@@ -1,6 +1,6 @@
-import type { Sprinkles } from "@/styles/sprinkles.css";
+import type { Sprinkles } from "@/styles/sprinkles.css.js";
 import { AllHTMLAttributes, createElement, ElementType } from "react";
-import { sprinkles } from "@/styles/sprinkles.css";
+import { sprinkles } from "@/styles/sprinkles.css.js";
 import cn from "classnames";
 
 export type SpaceProps = {

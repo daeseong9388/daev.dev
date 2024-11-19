@@ -1,7 +1,7 @@
 import { ElementType, ReactNode } from "react";
-import { Box } from "@/components/layout/box";
-import { Sprinkles, sprinkles } from "@/styles/sprinkles.css";
-import * as styles from "@/styles/typography.css";
+import { Box } from "@/components/layout/box.js";
+import { Sprinkles, sprinkles } from "@/styles/sprinkles.css.js";
+import * as styles from "@/styles/typography.css.js";
 import cn from "classnames";
 
 export type HeadingLevel = keyof typeof styles.heading;

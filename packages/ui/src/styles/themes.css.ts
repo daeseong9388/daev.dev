@@ -1,8 +1,8 @@
 import { precomputeValues } from "@capsizecss/vanilla-extract";
 import { createGlobalTheme } from "@vanilla-extract/css";
-import colors from "tailwindcss/colors";
+import colors from "tailwindcss/colors.js";
 
-import { Breakpoint } from "./utils";
+import { Breakpoint } from "./utils.js";
 
 const grid = 4;
 const px = (value: string | number) => `${value}px`;
