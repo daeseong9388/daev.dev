@@ -1,8 +1,8 @@
 import { ElementType, ReactNode } from "react";
+import cn from "classnames";
 import { Box } from "@/components/layout/box.js";
 import { Sprinkles, sprinkles } from "@/styles/sprinkles.css.js";
 import * as styles from "@/styles/typography.css.js";
-import cn from "classnames";
 
 const colorMap = {
   neutral: { lightMode: "gray700", darkMode: "gray100" },

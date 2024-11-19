@@ -1,7 +1,7 @@
 import type { Sprinkles } from "@/styles/sprinkles.css.js";
 import { AllHTMLAttributes, createElement, ElementType } from "react";
-import { sprinkles } from "@/styles/sprinkles.css.js";
 import cn from "classnames";
+import { sprinkles } from "@/styles/sprinkles.css.js";
 
 export type SpaceProps = {
   padding?: Sprinkles["padding"];

@@ -1,8 +1,8 @@
 import { ElementType, ReactNode } from "react";
+import cn from "classnames";
 import { Box } from "@/components/layout/box.js";
 import { Sprinkles, sprinkles } from "@/styles/sprinkles.css.js";
 import * as styles from "@/styles/typography.css.js";
-import cn from "classnames";
 
 export type HeadingLevel = keyof typeof styles.heading;
 export type HeadingTag = "h1" | "h2" | "h3" | "h4";

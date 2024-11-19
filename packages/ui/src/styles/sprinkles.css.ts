@@ -7,7 +7,6 @@ import {
   defineProperties,
 } from "@vanilla-extract/sprinkles";
 import { mapValues } from "es-toolkit/compat";
-
 import { vars } from "./themes.css.js";
 import { breakpoints } from "./utils.js";
 
