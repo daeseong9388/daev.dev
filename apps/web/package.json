@@ -11,18 +11,28 @@
     "format": "prettier --check . --ignore-path ../../.gitignore"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.0.3",
     "@repo/ui": "workspace:*",
+    "@types/mdx": "^2.0.13",
+    "@vanilla-extract/css": "^1.16.0",
+    "@vanilla-extract/css-utils": "^0.1.4",
+    "classnames": "^2.5.1",
+    "codehike": "^1.0.4",
     "next": "15.0.3",
     "react": "catalog:react19",
     "react-dom": "catalog:react19"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^15.0.3",
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^20",
     "@types/react": "catalog:react19",
     "@types/react-dom": "catalog:react19",
+    "@vanilla-extract/next-plugin": "^2.4.6",
     "eslint": "catalog:",
     "eslint-config-next": "15.0.3",
     "typescript": "catalog:"
