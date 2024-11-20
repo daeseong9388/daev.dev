@@ -3,25 +3,45 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.es.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "style": "dist/styles.css",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.cjs.js",
-      "types": "./dist/index.d.ts"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./components": {
+      "import": {
+        "types": "./dist/components/index.d.mts",
+        "default": "./dist/components/index.mjs"
+      },
+      "require": {
+        "types": "./dist/components/index.d.ts",
+        "default": "./dist/components/index.js"
+      }
     },
     "./styles": {
-      "import": "./dist/styles/index.es.js",
-      "require": "./dist/styles/index.cjs.js"
-    }
+      "import": {
+        "types": "./dist/styles/index.d.mts",
+        "default": "./dist/styles/index.mjs"
+      },
+      "require": {
+        "types": "./dist/styles/index.d.ts",
+        "default": "./dist/styles/index.js"
+      }
+    },
+    "./style.css": "./dist/style.css"
   },
   "files": [
     "dist"
-  ],
-  "sideEffects": [
-    "**/*.css.ts"
   ],
   "scripts": {
     "lint": "eslint . --max-warnings 0",
