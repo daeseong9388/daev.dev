@@ -141,6 +141,12 @@ export function createTokenizer(options: TokenizerOptions = {}) {
     function consumeEnd(code: Code) {
       if (code !== codes.rightSquareBracket) return nok(code);
       effects.consume(code);
+      return consumeSecondBracket;
+    }
+
+    function consumeSecondBracket(code: Code) {
+      if (code !== codes.rightSquareBracket) return nok(code);
+      effects.consume(code);
       effects.exit(tokenTypes.marker);
       effects.exit(tokenTypes.link);
       return ok;
