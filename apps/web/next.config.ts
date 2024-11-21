@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { withContentCollections } from "@content-collections/next";
 import initializeBundleAnalyzer from "@next/bundle-analyzer";
 import { createVanillaExtractPlugin } from "@vanilla-extract/next-plugin";
 
@@ -12,4 +13,6 @@ const nextConfig: NextConfig = {
   output: "standalone",
 };
 
-export default withBundleAnalyzer(withVanillaExtract(nextConfig));
+export default withBundleAnalyzer(
+  withContentCollections(withVanillaExtract(nextConfig)),
+);
