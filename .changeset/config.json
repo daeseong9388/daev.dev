@@ -3,7 +3,7 @@
   "changelog": ["@changesets/changelog-github", {
     "repo": "daeseong9388/daev.dev"
   }],
-  "commit": false,
+  "commit": true,
   "fixed": [],
   "linked": [],
   "access": "restricted",
