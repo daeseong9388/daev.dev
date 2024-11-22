@@ -1,6 +1,8 @@
 {
   "$schema": "https://unpkg.com/@changesets/config@3.0.4/schema.json",
-  "changelog": "@changesets/cli/changelog",
+  "changelog": ["@changesets/changelog-github", {
+    "repo": "daeseong9388/daev.dev"
+  }],
   "commit": false,
   "fixed": [],
   "linked": [],
