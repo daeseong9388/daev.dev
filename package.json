@@ -9,7 +9,9 @@
     "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
     "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
     "typecheck": "turbo run check-types",
-    "prepare": "husky"
+    "prepare": "husky",
+    "changeset": "changeset",
+    "version": "changeset version"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.10",
