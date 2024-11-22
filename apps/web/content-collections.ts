@@ -2,6 +2,7 @@ import { exec as syncExec } from "node:child_process";
 import { promisify } from "node:util";
 import { defineCollection, defineConfig } from "@content-collections/core";
 import { compileMarkdown } from "@content-collections/markdown";
+import rehypeImages from "@repo/rehype-images";
 import remarkObsidian from "@repo/remark-obsidian";
 
 const exec = promisify(syncExec);
@@ -33,7 +34,16 @@ const posts = defineCollection({
 
     const html = await compileMarkdown(ctx, post, {
       remarkPlugins: [remarkObsidian],
-      rehypePlugins: [],
+      rehypePlugins: [
+        [
+          rehypeImages,
+          {
+            sourceDir: "../../content/assets", // 원본 이미지 위치
+            targetDir: "./public/images", // Next.js public 디렉토리 내 images
+            publicPath: "/images", // 웹 접근 경로
+          },
+        ],
+      ],
     });
 
     return {

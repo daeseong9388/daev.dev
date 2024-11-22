@@ -30,6 +30,7 @@
     "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@repo/remark-obsidian": "workspace:*",
+    "@repo/rehype-images": "workspace:*",
     "@types/node": "^20",
     "@types/react": "catalog:react19",
     "@types/react-dom": "catalog:react19",
