@@ -14,6 +14,7 @@ const posts = defineCollection({
   directory: postDirectory,
   include: "**/*.md",
   schema: (z) => ({
+    slug: z.string(),
     tags: z.array(z.string()),
     date: z.string().date(),
     aliases: z.array(z.string()),
@@ -33,7 +34,14 @@ const posts = defineCollection({
     );
 
     const html = await compileMarkdown(ctx, post, {
-      remarkPlugins: [remarkObsidian],
+      remarkPlugins: [
+        [
+          remarkObsidian,
+          {
+            linkTextTransform: () => `/posts/${post.slug}`,
+          },
+        ],
+      ],
       rehypePlugins: [
         [
           rehypeImages,
@@ -50,7 +58,6 @@ const posts = defineCollection({
       ...post,
       html,
       lastModified,
-      url: `/posts/${post._meta.path}`,
     };
   },
 
